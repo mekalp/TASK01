@@ -1,0 +1,112 @@
+
+1. Difference between HTTP1.1 vs HTTP2 
+
+
+HTTP/1.1 is a top-level application protocol that exchanges information between a client computer and a local or remote web server. In this process, a client sends a text-based request to a server by calling a method like GET or POST. In response, the server sends a resource like an HTML page back to the client.
+
+
+HTTP/2 came into use, which offered several methods to decrease latency, especially when dealing with mobile platforms and server-intensive graphics and videos.
+
+
+HTTP/2 began as the SPDY protocol, developed primarily at Google with the intention of reducing web page load latency by using techniques such as compression, multiplexing, and prioritisation.
+
+
+In simple: HTTP/1.1 transfers these in plain-text messages, HTTP/2 encodes these into binary, allowing for significantly different delivery model possibilities.
+
+
+HTTP2 is fully multiplexed, instead of ordered and blocking.
+
+HTTP2 can, therefore, use one connection for parallelism.
+
+HTP2 uses header compression to reduce overhead.
+
+HTTP2 allows servers to “push” responses proactively into client caches.
+
+HTTP2 is secured by default.
+
+
+
+2. Difference between Browser JS(console) vs Nodejs.
+
+
+In browser “window” is a predefined global object which has functions and attributes, where as Nodejs doesn’t have it.
+
+In browser “location” is another predefined object, where as Nodejs doesn’t have it.
+
+In browser “require” is not predefined object, where as Nodejs has it.
+
+In browser module is not required, where as in Nodejs you have to keep your code inside the module.
+
+In browser “document” is a predefined object, where as Nodejs doesn’t have it.
+
+
+3. http version history?
+
+
+HTTP/0.9
+Year of release 1991
+
+It is extremely simple requests consist of a single line and start with the only possible method GET followed by the path to the resource.
+
+There were no status or error messages.
+
+HTTP/1.0
+Year of release is 1996
+
+Version information is now sent within each request.
+
+A status code is also sent at the beginning of the response.
+
+The HTTP headers has been introduced.
+
+The transfer of other documents than plain HTML files has been added.
+
+HTTP/1.1
+Year of release is 1997
+
+A connection can be reused.
+
+Pipelining has been added, allowing to send a second request before the answer for the first one is fully transmitted.
+
+Cache control mechanism have been introduced.
+
+HTTP/2
+Year of release is 2015
+
+It is a binary protocol rather than text.
+
+It is a multiplexed protocol. Parallel requests can be handled over the same connection, removing the order and blocking issues of the HTTTP/1.1 protocol.
+
+It compresses headers. As these are often similar among a set of requests, this removes duplication and overhead of data transmitted.
+
+
+
+4. Steps for what happens when we enter a URL :
+
+Browser checks cache for DNS entry to find the corresponding IP address of website.
+
+It looks for following cache. If not found in one, then continues checking to the next until found.
+
+Browser Cache
+
+Operating Systems Cache
+
+Router Cache
+
+ISP Cache
+
+If not found in cache, ISP’s (Internet Service Provider) DNS server initiates a DNS query to find IP address of server that hosts the domain name.
+
+The requests are sent using small data packets that contain information content of request and IP address it is destined for.
+
+Browser initiates a TCP (Transfer Control Protocol) connection with the server using synchronize(SYN) and acknowledge(ACK) messages.
+
+Browser sends an HTTP request to the web server. GET or POST request.
+
+Server on the host computer handles that request and sends back a response. It assembles a response in some format like JSON, XML and HTML.
+
+Server sends out an HTTP response along with the status of response.
+
+Browser displays HTML content
+
+Finally, Done.
